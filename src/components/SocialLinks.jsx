@@ -1,7 +1,6 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const SocialLinks = () => {
   const links = [
@@ -12,7 +11,7 @@ const SocialLinks = () => {
           Linkdin <FaLinkedin size={30} />
         </>
       ),
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/ali-pourhassan-875891222/",
       style: "rounded-tr-md",
     },
     {
@@ -22,7 +21,7 @@ const SocialLinks = () => {
           Github <FaGithub size={30} />
         </>
       ),
-      href: "https://github.com",
+      href: "https://github.com/aliph55",
     },
     {
       id: 3,
@@ -37,11 +36,10 @@ const SocialLinks = () => {
       id: 4,
       child: (
         <>
-          Resume <BsFillPersonLinesFill size={30} />
+          Instagram <FaInstagram size={30} />
         </>
       ),
-      href: "/",
-      download: true,
+      href: "https://www.instagram.com/ali_samsun2021/",
       style: "rounded-br-md",
     },
   ];
@@ -49,7 +47,7 @@ const SocialLinks = () => {
   return (
     <div className="hidden lg:flex flex-col fixed top-[35%] left-0  ">
       <ul>
-        {links.map(({ id, child, href, style, download }) => (
+        {links.map(({ id, child, href, style }) => (
           <li
             key={id}
             className={
@@ -61,7 +59,6 @@ const SocialLinks = () => {
             <a
               href={href}
               className="flex justify-between items-center w-full text-white"
-              download={download}
               target="_blank"
               rel="noreferrer"
             >
